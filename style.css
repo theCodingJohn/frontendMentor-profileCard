@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Kumbh Sans", sans-serif;
+  color: #2d3248;
+  height: 100vh;
+  width: 100vw;
+  background-color: #19a2ae;
+  overflow-x: hidden;
+}
+
+.top {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  background-image: url("./images/bg-pattern-top.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.card {
+  width: 375px;
+  height: 400px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 49px 0px #6a6f81;
+          box-shadow: 0px 0px 49px 0px #6a6f81;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.card .card-header {
+  background-image: url("./images/bg-pattern-card.svg");
+  height: 40%;
+  width: 100%;
+}
+
+.card .card-body {
+  position: relative;
+  background: white;
+  height: 60%;
+  width: 100%;
+}
+
+.card .card-body .profile-pic {
+  position: absolute;
+  top: -50px;
+  border: 5px solid white;
+  border-radius: 100%;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.card .card-body .info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-bottom: 1px solid #c9c9c9;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60%;
+}
+
+.card .card-body .info-wrapper h1 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card .card-body .info-wrapper h1 .age {
+  font-weight: 400;
+  color: #969696;
+}
+
+.card .card-body .info-wrapper h2 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #969696;
+  margin-bottom: 20px;
+}
+
+.card .card-body .social-stats {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  height: 40%;
+}
+
+.card .card-body .social-stats div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .card-body .social-stats div h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.card .card-body .social-stats div p {
+  font-size: 12px;
+  color: #969696;
+}
+
+.bottom {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  bottom: 0;
+  right: 0;
+  background-image: url("./images/bg-pattern-bottom.svg");
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,123 @@
+$primary-cyan: hsl(185, 75%, 39%);
+$dark-blue: hsl(229, 23%, 23%);
+$grayish-blue: hsl(227, 10%, 46%);
+$dark-gray: hsl(0, 0%, 59%);
+
+@mixin background {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+}
+
+@mixin center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kumbh Sans", sans-serif;
+  color: $dark-blue;
+  height: 100vh;
+  width: 100vw;
+  background-color: $primary-cyan;
+  overflow-x: hidden;
+}
+
+.top {
+  @include background();
+  top: 0;
+  left: 0;
+  background-image: url("./images/bg-pattern-top.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.card {
+  width: 375px;
+  height: 400px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 49px 0px $grayish-blue;
+  z-index: 2;
+  overflow: hidden;
+  .card-header {
+    background-image: url("./images/bg-pattern-card.svg");
+    height: 40%;
+    width: 100%;
+  }
+  .card-body {
+    position: relative;
+    background: white;
+    height: 60%;
+    width: 100%;
+    .profile-pic {
+      position: absolute;
+      top: -50px;
+      border: 5px solid white;
+      border-radius: 100%;
+      text-align: center;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+    .info-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border-bottom: 1px solid lighten($dark-gray, 20%);
+      align-items: center;
+      height: 60%;
+      h1 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        .age {
+          font-weight: 400;
+          color: $dark-gray;
+        }
+      }
+      h2 {
+        font-size: 16px;
+        font-weight: 400;
+        color: $dark-gray;
+        margin-bottom: 20px;
+      }
+    }
+    .social-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      height: 40%;
+      div {
+        @include center();
+        h3 {
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 4px;
+        }
+        p {
+          font-size: 12px;
+          color: $dark-gray;
+        }
+      }
+    }
+  }
+}
+
+.bottom {
+  @include background();
+  bottom: 0;
+  right: 0;
+  background-image: url("./images/bg-pattern-bottom.svg");
+}
